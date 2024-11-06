@@ -2,7 +2,7 @@ from django.db import models
 from accounts.models import CustomUser
 
 class Survey(models.Model):
-	Suvery_name = models.CharField(max_length=200)
+	Survey_name = models.CharField(max_length=200)
 	Survey_description = models.CharField(max_length=200)
 	State = models.CharField(max_length=20)
 	Time_created = models.DateTimeField()
