@@ -11,21 +11,14 @@ Used to see results for specific survey
 <body>
     <center>
         <h1>Surveys</h1>
-        <table>
+        </hr>
+        <a href="{% url 'createSurvey' %}"><button>Create Survey</button></a>
+        <table border="1">
             <tr>
-                <td>Survey Name</td>
-            </tr>
-             <tr>
-                <td>Survey Decription</td>
-            </tr>
-             <tr>
-                <td>Survey State</td>
-            </tr>
-            <tr>
-                <td>Survey Name</td>
-            </tr>
-            <tr>
-                <td>Date Created</td>
+                <th>Survey Name</th>
+                <th>Survey Decription</th>
+                <th>Survey State</th>
+                <th>Date Created</th>
             </tr>
         </table>
     </center>

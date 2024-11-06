@@ -21,4 +21,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('surveydashboard/', views.showSurveys, name='showSurveys'),
+    path('createsurvey', views.createSurvey, name='createSurvey'),
 ]
