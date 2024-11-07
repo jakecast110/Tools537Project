@@ -21,8 +21,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('surveys/', views.survey_list),
-    path('surveys/<int:pk>/', views.survey_detail)
+    path('surveys/', views.SurveyList.as_view()),
+    path('surveys/<int:pk>/', views.SurveyDetail.as_view())
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
