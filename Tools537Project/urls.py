@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
 
 urlpatterns = [
@@ -23,3 +24,5 @@ urlpatterns = [
     path('surveys/', views.survey_list),
     path('surveys/<int:pk>/', views.survey_detail)
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
