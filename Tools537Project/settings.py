@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'Tools537Project.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ToolsProject',
+        'NAME': 'SurveyProject',
         'USER': 'postgres',
         'PASSWORD': 'Pineapple110!',
         'HOST': 'localhost',
@@ -132,7 +132,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -155,3 +154,8 @@ CACHES = {
         'LOCATION': 'redis://127.0.0.1:6379/1'
     }
 }
+
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = '/'
