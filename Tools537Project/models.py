@@ -1,12 +1,12 @@
 from django.db import models
-from accounts.models import CustomUser
+from django.contrib.auth.models import User
 
 class Survey(models.Model):
 	Survey_name = models.CharField(max_length=200)
 	Survey_description = models.CharField(max_length=200)
 	State = models.CharField(max_length=20)
 	Time_created = models.DateTimeField(auto_now=True)
-	Creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+	Creator = models.ForeignKey('auth.User', related_name='surveys', on_delete=models.CASCADE)
 
 class Questions(models.Model):
 	Question_description = models.CharField(max_length=200)
