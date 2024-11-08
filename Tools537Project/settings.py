@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
     'Tools537Project',
+    'surveys',
     'rest_framework'
 ]
 
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'Tools537Project.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ToolsProject',
+        'NAME': 'SurveyProject',
         'USER': 'postgres',
         'PASSWORD': 'Pineapple110!',
         'HOST': 'localhost',
@@ -131,8 +131,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-AUTH_USER_MODEL = 'accounts.CustomUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
