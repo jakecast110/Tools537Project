@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block header %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <!-- You might want to add content for authenticated users here -->
+    {% else %}
+        <h2>Login/Register page for Survey make and taker!</h2>
+        <p>Click login if Registration is done</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <p>Need to create new User for inventory ?</p>
+        <a href="{% url 'register' %}">Register here</a>
+    {% endif %}
+{% endblock %}

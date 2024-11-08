@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>User Registration</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+</head>
+
+<body>
+  <main>
+    <nav>
+        
+    </nav>
+    
+    <div class="loginmgmt"> 
+        <h2>New User Registration Form</h2>
+        <form method="post">
+          {% csrf_token %}
+            <div>
+    <label for="id_username">Username:</label>
+
+<input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required aria-describedby="id_username_helptext" id="id_username">
+    
+</div>
+
+  <div>
+    <label for="id_password1">Password:</label>
+
+<input type="password" name="password1" autocomplete="new-password" aria-describedby="id_password1_helptext" id="id_password1">
+    
+</div>
+
+  <div>
+    <label for="id_password2">Password confirmation:</label>
+
+<div class="helptext" id="id_password2_helptext">Enter the same password as before, for verification.</div>
+
+<input type="password" name="password2" autocomplete="new-password" aria-describedby="id_password2_helptext" id="id_password2">
+    
+      
+    
+</div>
+            <div class="error" id="errorMessage" style="display: none;">Please fill out all fields.</div>
+            <button type="submit">Register Me</button>
+        </form>
+        <a href="/" class="button-link">Cancel</a>
+    </div>
+
+  
+  </main>
+  
+<script src="/static/scripts/register.js"></script> 
+
+
+</body>
+
+</html>
